@@ -14,11 +14,7 @@ ghostry/aria2
 ```
 -e SECRET=YOUR_SECRET_CODE \
 ```
-如果希望修改配置文件，把
+如果希望修改配置文件，可以使用
 ```
--v /data/aria2/down:/aria2/down \
-```
-换成
-```
--v /data/aria2:/aria2 \
+-v /data/aria2/conf:/aria2/conf \
 ```
