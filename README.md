@@ -6,10 +6,19 @@
 docker run -d \
 --name garia2 \
 -p 6800:6800 \
--v /data/aria2:/aria2 \
--e SECRET=YOUR_SECRET_CODE \
+-v /data/aria2/down:/aria2/down \
 --restart always \
 ghostry/aria2
 ```
-其中SECRET可选,
-
+如果希望加密，可以使用
+```
+-e SECRET=YOUR_SECRET_CODE \
+```
+如果希望修改配置文件，把
+```
+-v /data/aria2/down:/aria2/down \
+```
+换成
+```
+-v /data/aria2:/aria2 \
+```
