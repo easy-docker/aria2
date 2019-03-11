@@ -3,6 +3,7 @@
 
 # 使用
 ```
+docker pull ghostry/aria2
 docker container stop garia2 && docker container rm garia2
 docker run -d \
 --name garia2 \
