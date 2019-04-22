@@ -25,3 +25,7 @@ ghostry/aria2
 -v /data/aria2:/aria2 \
 ```
 同时映射下载目录和配置目录
+在Linux系统下,可能需要以当前用户运行,以便维持权限
+```
+--user $(id -u):$(id -g) \
+```
