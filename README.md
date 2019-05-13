@@ -7,8 +7,10 @@ docker pull ghostry/aria2
 docker container stop garia2 && docker container rm garia2
 docker run -d \
 --name garia2 \
+--user $(id -u):$(id -g) \
 -p 6800:6800 \
--v /data/aria2/down:/aria2/down \
+-v ~/.garia2:/aria2/conf \
+-v ~/Downloads:/aria2/down \
 --restart always \
 ghostry/aria2
 ```
@@ -16,15 +18,10 @@ ghostry/aria2
 ```
 -e SECRET=YOUR_SECRET_CODE \
 ```
-如果希望升级时保留任务进度，或需要自定配置，可以使用
-```
--v /data/aria2/conf:/aria2/conf \
-```
-也可以使用
+同时映射下载目录和配置目录可以使用,
 ```
 -v /data/aria2:/aria2 \
 ```
-同时映射下载目录和配置目录
 在Linux系统下,可能需要以当前用户运行,以便维持权限
 ```
 --user $(id -u):$(id -g) \
