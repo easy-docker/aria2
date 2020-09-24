@@ -2,7 +2,7 @@ FROM alpine
 
 LABEL maintainer="Ghostry <ghostry.green@gmail.com>"
 
-RUN apk add --no-cache aria2
+RUN apk add --no-cache 'aria2=1.35.0-r0'
 
 ADD start.sh /start.sh
 ADD aria2.conf /aria2.conf
