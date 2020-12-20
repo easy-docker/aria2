@@ -33,3 +33,6 @@ docker run -d \
 ```
 -e UPTRACKER=1
 ```
+
+# 其他
+推荐另外一款 https://hub.docker.com/r/p3terx/aria2-pro ,相对来说有更多功能,配置使用更复杂一些.
